@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "kowow",
+			"path": "/workspaces/kowow"
+		},
+		{
+			"name": "kowcraft",
+			"path": "/workspaces/kowcraft"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"deps.edn": "clojure"
+		}
+	}
+}

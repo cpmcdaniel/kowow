@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	"name": "kowow-clojure",
+	"dockerFile": "Dockerfile",
+	"context": "..",
+	"workspaceMount": "source=${localWorkspaceFolder}/..,target=/workspaces,type=bind,consistency=cached",
+	"workspaceFolder": "/workspaces/kowow",
+	"runArgs": ["--init", "--env-file", ".devcontainer/devcontainer.env"],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"betterthantomorrow.calva",
+				"betterthantomorrow.calva-backseat-driver"
+			],
+			"settings": {
+				"calva.autoConnectRepl": false,
+				"calva.fmt.configPath": "./.cljfmt.edn",
+				"files.associations": {
+					"deps.edn": "clojure"
+				}
+			}
+		}
+	},
+	"postCreateCommand": "bash .devcontainer/post-create.sh",
+	"remoteUser": "vscode"
+}

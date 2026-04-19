@@ -1,0 +1,9 @@
+.envrc
+.devcontainer/devcontainer.env
+output/
+*.log
+.clj-kondo/
+.cpcache/
+.calva/
+.lsp/
+.nrepl-port
